@@ -65,8 +65,7 @@ def normalize_angle(angle):
         angle = angle - (2 * math.pi * angle) / (math.fabs(angle))
     return angle
 
-def fix_yaw(des_pos):
-    desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
+def fix_yaw(des_yaw, next_state):
     err_yaw = normalize_angle(desired_yaw - yaw_)
     rospy.loginfo(err_yaw)
     twist_msg = Twist()
@@ -80,7 +79,7 @@ def fix_yaw(des_pos):
     # state change conditions
     if math.fabs(err_yaw) <= yaw_precision_2_:
         print ('Yaw error: [%s]' % err_yaw)
-        change_state(1)
+        change_state(next_state)
 
 
 def go_straight_ahead(des_pos):
@@ -132,7 +131,7 @@ def done():
     
 def go_to_point(goal):
 
-    global act_s,feedback
+    global act_s
     
     desired_position = Point()
     desired_position_.x = goal.x
@@ -154,7 +153,7 @@ def go_to_point(goal):
             change_state(-1)
             mission_success =True
         elif state_ == 0:
-            fix_yaw(desired_position_)
+            fix_yaw(desired_yaw)
         elif state_ == 1:
             go_straight_ahead(desired_position_)
         elif state_ == 2:
