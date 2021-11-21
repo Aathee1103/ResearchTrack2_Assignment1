@@ -26,8 +26,7 @@ namespace rt2_assignment1
         public: 
             FSM(const rclcpp::NodeOptions & options)
             : Node("state_machine", options)
-            { 
-            //initialize the publisher, the subscriber, client1, client2
+            {
             command_service=this->create_service<rt2_assignment1::srv::Command>("/user_interface", std::bind(&FSM::user_interface, this, _1, _2, _3));
            
             client_random= this->create_client<rt2_assignment1::srv::RandomPosition>("/position_server");
