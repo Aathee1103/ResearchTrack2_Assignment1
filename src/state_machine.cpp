@@ -45,7 +45,7 @@ namespace rt2_assignment1
 						RCLCPP_ERROR(this->get_logger(), "client interrupted while waiting for service to appear.");
 						return ;
 					}
-					RCLCPP_INFO(this->get_logger(), "waiting for pservice to appear...");
+					RCLCPP_INFO(this->get_logger(), "waiting for position service to appear...");
 				}
 
             }
@@ -75,7 +75,7 @@ namespace rt2_assignment1
                    
                     if(position_future.get()->ok)
                     {
-                        printf("\n Posioitn reached!");
+                        printf("\n Position reached!");
                         this->fsm();
                     }
                 };
