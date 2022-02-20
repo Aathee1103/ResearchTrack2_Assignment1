@@ -15,6 +15,6 @@ A launch file has been provided to generate the Gazebo simulation and run all th
 
 - sim.launch: this launch file is used to launch all the nodes and to start the gazebo simulation.
 
-'''
+```
 roslaunch rt2_assignment1 sim.launch
-'''
+```
