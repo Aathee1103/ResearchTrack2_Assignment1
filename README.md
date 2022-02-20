@@ -4,6 +4,7 @@ This package helps to control the robot in the Coppeliasim environment using 'go
 
 Child script for Coppeliasim:
 - dr20_ros_ctrl:this file has code written in lua and it helps to control the dr20 mobile robot from the ros environment and it does not have action server implemented so when the 'stop' is given by the user,the robot will stop when it reaches the target.
+<img width="281" alt="image" src="https://user-images.githubusercontent.com/80621864/154863503-a7ca9ef1-44fe-40da-b905-4fe814e5341c.png">
 
 Two nodes are implemented as python scripts:
 - go_to_point: the node GoToPoint, which implements a service to drive a robot toward a point in the gazebo environment.This node publishes on the topics /cmd_vel the velocity of the robot and read its position by subscribing the topic '/odom'.
@@ -21,4 +22,3 @@ A launch file has been provided to generate the Gazebo simulation and run all th
 ```
 roslaunch rt2_assignment1 vrep.launch
 ```
-<img width="281" alt="image" src="https://user-images.githubusercontent.com/80621864/154863411-fc7a2e07-7933-4944-9d65-1026ec37f91d.png">
