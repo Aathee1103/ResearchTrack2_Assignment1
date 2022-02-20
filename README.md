@@ -17,5 +17,4 @@ A launch file has been provided to generate the Gazebo simulation and run all th
 
 '''
 roslaunch rt2_assignment1 sim.launch
-
 '''
