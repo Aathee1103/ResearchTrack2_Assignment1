@@ -23,4 +23,5 @@ Other two nodes are implemented in C++:
 roslaunch rt2_assignment1 vrep.launch
 ```
 2.To open the coppeliasim application:
-```../CoppeliaSim_Edu_V4_2_0_Ubuntu20_04/.coppeliaSim.sh``` will open the coppeliasim simulation.
+```../CoppeliaSim_Edu_V4_2_0_Ubuntu20_04/.coppeliaSim.sh``` 
+  this command will open the coppeliasim simulation.
