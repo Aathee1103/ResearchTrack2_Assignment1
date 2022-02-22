@@ -12,9 +12,8 @@ cd~/my_ros2/src/git clone https://github.com/ros2/ros1_bridge.git
 #clone the bridge repository
 cd~/my_ros2/colcon build --symlink-install --packages-skip ros1_bridge
 ```
-- 3.
+- 3.open another terminal
 ```
-#Open another terminal
 source ros12.sh
 cd ~/colcon_ws
 colcon build --packages-select ros1_bridge --cmake-force-configure
