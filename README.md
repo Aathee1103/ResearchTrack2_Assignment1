@@ -3,15 +3,16 @@
 This is a package toshow how the ros package is package is controlled using ros1 simulation.this package is supposed to be integrated with a Ros1 environment which includes a Gazebo environment to control the non-holonomic robot and which has '/go_to_point' behaviour which is given in main branch.the connection between ros1 simulation and the ros2 package is done using ``` ros1_bridge ``` which is installed and compiled.After installation,``` ros1_bridge ``` package and then the ros2 packaged here will be running.using this user can control the robot in ros1 rom rs2 package.the two file ***state_machine.cpp*** and ***position_service.cpp*** is made as ros2 compenents to to control the ros1 enironment.
 
 ## Setting up the environment:
-1.cd~/my_ros/catkin_make
-2.open a terminal and do the following steps:
+- 1.cd~/my_ros/catkin_make
+
+- 2.open a terminal and do the following steps:
 ```
 source ros2 environment(source ros2.sh)
 cd~/my_ros2/src/git clone https://github.com/ros2/ros1_bridge.git
 #clone the bridge repository
 cd~/my_ros2/colcon build --symlink-install --packages-skip ros1_bridge
 ```
-2.
+- 3.
 ```
 #Open another terminal
 source ros12.sh
