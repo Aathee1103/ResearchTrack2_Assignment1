@@ -26,9 +26,11 @@ colcon build --packages-select ros1_bridge --cmake-force-configure
 - Launch the simulation and the needed nodes from the ROS1 in a 1st terminal:
 ```roslaunch rt2assignment1 ros_2.launch```
 #launch the robot in gazebo simulation.
+
 2.Run the ros1_bridge package in a terminal:
 - source the ROS1and ROS2 enironment ```source /root/my_ros/devel/setup.bash``` and  ```source /root/my_ros2/devel/setup.bash```
 -  run the command ```ros2 run ros1_bridge dynamic_bridge``` 
+
 3.Launch the container with the components implemented in this package in a shell with ROS2 sourced:
 - source ROS2 ```source /root/my_ros2/devel/setup.bash```
 - ```ros2 launch rt2_assignment1 bridge.py``` after this given command the bridge will be working.
