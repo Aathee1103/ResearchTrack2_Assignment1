@@ -15,7 +15,7 @@ Other two nodes are implemented in C++:
 - state_machine: The service implemented in the Robot FSM node gives the possibility to start or stop the robot behaviour.it monitors the request of a new goal pose when needed, sending it as a goal to 'go_to_point' action server.
 
 ## Command for Running the package:
-1.A launch file has been provided to generate the Gazebo simulation and run all the nodes required for the control of the non-holonomic robot:
+1.A launch file has been provided to run all the ros nodes required for the control of robot in coppeliasim environment using ros:
 - source ROS1 workspace.
 - Vrep.launch: this launch file is used to launch all the required nodes.
 
