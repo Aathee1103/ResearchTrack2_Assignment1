@@ -17,7 +17,7 @@ Other two nodes are implemented in C++:
 ## Command for Running the package:
 1.A launch file has been provided to generate the Gazebo simulation and run all the nodes required for the control of the non-holonomic robot:
 - source ROS1 workspace.
-- sim.launch: this launch file is used to launch all the nodes and to start the vrep scene(coppeliasim).
+- Vrep.launch: this launch file is used to launch all the required nodes.
 
 ```
 roslaunch rt2_assignment1 vrep.launch
